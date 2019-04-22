@@ -1,0 +1,299 @@
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[d8f78f6e-73da-4ff1-b4c0-d0052716e72b] AuthMiddleware(middleware::auth): apiResp.metadata.endMetaDataV2 is not a function","level":"error"}
+{"message":"[d8f78f6e-73da-4ff1-b4c0-d0052716e72b] SERVER(Error-Middleware): apiResp.metadata.endMetaDataV2 is not a function","level":"error"}
+{"message":"[d8f78f6e-73da-4ff1-b4c0-d0052716e72b] ::1 - - [22/Apr/2019:11:20:12 +0000] \"POST /v1/users HTTP/1.1\" 500 299 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[854c9a1c-89ea-43f0-8164-f5b4ef7b928c] AuthMiddleware(middleware::auth): apiResp.metadata.endMetaDataV2 is not a function","level":"error"}
+{"message":"[854c9a1c-89ea-43f0-8164-f5b4ef7b928c] SERVER(Error-Middleware): apiResp.metadata.endMetaDataV2 is not a function","level":"error"}
+{"message":"[854c9a1c-89ea-43f0-8164-f5b4ef7b928c] ::1 - - [22/Apr/2019:11:26:34 +0000] \"POST /v1/users HTTP/1.1\" 500 303 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[1d9c1fdc-4b75-45d2-9715-bc6e95784fc2] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[1d9c1fdc-4b75-45d2-9715-bc6e95784fc2] ::1 - - [22/Apr/2019:11:41:48 +0000] \"POST /v1/users HTTP/1.1\" 401 424 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[f70626dc-e438-438d-bf33-58bb9c719acd] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[f70626dc-e438-438d-bf33-58bb9c719acd] ::1 - - [22/Apr/2019:11:45:27 +0000] \"POST /v1/users HTTP/1.1\" 401 428 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[92afd30e-bf1a-46b6-a60d-876433a8a973] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[92afd30e-bf1a-46b6-a60d-876433a8a973] ::1 - - [22/Apr/2019:11:46:41 +0000] \"POST /v1/users HTTP/1.1\" 401 422 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"error":{},"level":"error","message":"uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (d:\\task1\\basicStructure\\node_modules\\express\\lib\\router\\index.js:458:13)\n    at Object.<anonymous> (d:\\task1\\basicStructure\\server.js:45:11)\n    at Module._compile (internal/modules/cjs/loader.js:701:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)\n    at Module.load (internal/modules/cjs/loader.js:600:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:531:3)\n    at Module.require (internal/modules/cjs/loader.js:637:17)\n    at require (internal/modules/cjs/helpers.js:22:18)\n    at Object.<anonymous> (d:\\task1\\basicStructure\\bin\\www:14:13)","stack":"TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (d:\\task1\\basicStructure\\node_modules\\express\\lib\\router\\index.js:458:13)\n    at Object.<anonymous> (d:\\task1\\basicStructure\\server.js:45:11)\n    at Module._compile (internal/modules/cjs/loader.js:701:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)\n    at Module.load (internal/modules/cjs/loader.js:600:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:531:3)\n    at Module.require (internal/modules/cjs/loader.js:637:17)\n    at require (internal/modules/cjs/helpers.js:22:18)\n    at Object.<anonymous> (d:\\task1\\basicStructure\\bin\\www:14:13)","exception":true,"date":"Mon Apr 22 2019 17:31:11 GMT+0530 (India Standard Time)","process":{"pid":10236,"uid":null,"gid":null,"cwd":"d:\\task1\\basicStructure","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v10.15.3","argv":["C:\\Program Files\\nodejs\\node.exe","d:\\task1\\basicStructure\\bin\\www"],"memoryUsage":{"rss":56545280,"heapTotal":36503552,"heapUsed":19639968,"external":227494}},"os":{"loadavg":[0,0,0],"uptime":437097},"trace":[{"column":13,"file":"d:\\task1\\basicStructure\\node_modules\\express\\lib\\router\\index.js","function":"Function.use","line":458,"method":"use","native":false},{"column":11,"file":"d:\\task1\\basicStructure\\server.js","function":null,"line":45,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":701,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":712,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":600,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"tryModuleLoad","line":539,"method":null,"native":false},{"column":3,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":531,"method":"_load","native":false},{"column":17,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":637,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":22,"method":null,"native":false},{"column":13,"file":"d:\\task1\\basicStructure\\bin\\www","function":null,"line":14,"method":null,"native":false}]}
+{"error":{},"level":"error","message":"uncaughtException: Router.use() requires a middleware function but got a Object\nTypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (d:\\task1\\basicStructure\\node_modules\\express\\lib\\router\\index.js:458:13)\n    at Object.<anonymous> (d:\\task1\\basicStructure\\server.js:45:11)\n    at Module._compile (internal/modules/cjs/loader.js:701:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)\n    at Module.load (internal/modules/cjs/loader.js:600:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:531:3)\n    at Module.require (internal/modules/cjs/loader.js:637:17)\n    at require (internal/modules/cjs/helpers.js:22:18)\n    at Object.<anonymous> (d:\\task1\\basicStructure\\bin\\www:14:13)","stack":"TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (d:\\task1\\basicStructure\\node_modules\\express\\lib\\router\\index.js:458:13)\n    at Object.<anonymous> (d:\\task1\\basicStructure\\server.js:45:11)\n    at Module._compile (internal/modules/cjs/loader.js:701:30)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)\n    at Module.load (internal/modules/cjs/loader.js:600:32)\n    at tryModuleLoad (internal/modules/cjs/loader.js:539:12)\n    at Function.Module._load (internal/modules/cjs/loader.js:531:3)\n    at Module.require (internal/modules/cjs/loader.js:637:17)\n    at require (internal/modules/cjs/helpers.js:22:18)\n    at Object.<anonymous> (d:\\task1\\basicStructure\\bin\\www:14:13)","exception":true,"date":"Mon Apr 22 2019 17:32:18 GMT+0530 (India Standard Time)","process":{"pid":5836,"uid":null,"gid":null,"cwd":"d:\\task1\\basicStructure","execPath":"C:\\Program Files\\nodejs\\node.exe","version":"v10.15.3","argv":["C:\\Program Files\\nodejs\\node.exe","d:\\task1\\basicStructure\\bin\\www"],"memoryUsage":{"rss":57131008,"heapTotal":36503552,"heapUsed":19646680,"external":227494}},"os":{"loadavg":[0,0,0],"uptime":437164},"trace":[{"column":13,"file":"d:\\task1\\basicStructure\\node_modules\\express\\lib\\router\\index.js","function":"Function.use","line":458,"method":"use","native":false},{"column":11,"file":"d:\\task1\\basicStructure\\server.js","function":null,"line":45,"method":null,"native":false},{"column":30,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":701,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":712,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":600,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"tryModuleLoad","line":539,"method":null,"native":false},{"column":3,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":531,"method":"_load","native":false},{"column":17,"file":"internal/modules/cjs/loader.js","function":"Module.require","line":637,"method":"require","native":false},{"column":18,"file":"internal/modules/cjs/helpers.js","function":"require","line":22,"method":null,"native":false},{"column":13,"file":"d:\\task1\\basicStructure\\bin\\www","function":null,"line":14,"method":null,"native":false}]}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[6438c8f3-e388-450e-917c-6b6eddf12cc7] SERVER(Error-Middleware): d:\\task1\\basicStructure\\views\\login.ejs:29\n    27| </body>\r\n    28| <script>\r\n >> 29| var msg = '<%= msg %>';\r\n    30| document.getElementById(\"alarmmsg\").innerHTML = msg;\r\n    31| setTimeout(function(){\r\n    32|     document.getElementById(\"alarmmsg\").innerHTML = '';\r\n\nmsg is not defined","level":"error"}
+{"message":"[6438c8f3-e388-450e-917c-6b6eddf12cc7] ::1 - - [22/Apr/2019:12:04:27 +0000] \"GET /v1/login HTTP/1.1\" 500 585 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[3193f00f-9375-4e6f-85bb-fed9fb720206] ::1 - - [22/Apr/2019:12:05:27 +0000] \"GET /v1/login HTTP/1.1\" 200 897 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[d0cea3db-3a5f-4616-ae7e-e29b16f3d4a6] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[d0cea3db-3a5f-4616-ae7e-e29b16f3d4a6] ::1 - - [22/Apr/2019:12:05:27 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:05:27 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[f0862e5c-410d-45e3-93f3-5104433b5089] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[f0862e5c-410d-45e3-93f3-5104433b5089] ::1 - - [22/Apr/2019:12:06:06 +0000] \"POST /auth/signin HTTP/1.1\" 401 425 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[80b768ee-16f7-407b-8fe5-81c1437126b8] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[80b768ee-16f7-407b-8fe5-81c1437126b8] ::1 - - [22/Apr/2019:12:06:15 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[93afbed0-fe70-4f37-886e-d36400f7f8f2] ::1 - - [22/Apr/2019:12:06:16 +0000] \"GET /v1/login HTTP/1.1\" 200 891 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[5f8db7c4-86e9-479b-8cb6-72dcbcde4b2f] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[5f8db7c4-86e9-479b-8cb6-72dcbcde4b2f] ::1 - - [22/Apr/2019:12:06:16 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:06:16 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[750a05eb-45a4-47d8-8a1b-799af32b667d] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[99f71e3b-536e-4a9c-887c-77293f796d22] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[99f71e3b-536e-4a9c-887c-77293f796d22] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[f6613fc8-e97a-401d-8e14-a747f3fc72af] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[e70afc91-5662-4fbc-b15d-54a6ef265121] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[e70afc91-5662-4fbc-b15d-54a6ef265121] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[8b5b113b-e596-45c7-a9b6-6725a34fe11e] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[f41a1fac-0b9a-4da5-95e9-826ab1544ac1] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[f41a1fac-0b9a-4da5-95e9-826ab1544ac1] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[e7ad10af-bc50-445d-84f1-4c42754ce2cc] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[82d69d43-ef12-4513-a937-4bc3d139e0e0] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[82d69d43-ef12-4513-a937-4bc3d139e0e0] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[4c12c71f-f166-465b-9a00-0da88a585ae6] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[5e3285d5-71d1-42a7-9fb4-0cfa1fdfb6eb] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[5e3285d5-71d1-42a7-9fb4-0cfa1fdfb6eb] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:06:17 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[1355b899-b88e-4f0e-b848-41ede4fafbd2] ::1 - - [22/Apr/2019:12:06:23 +0000] \"POST /login HTTP/1.1\" 404 286 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[186a33b4-2d99-4019-ac36-dd24f53694c0] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[186a33b4-2d99-4019-ac36-dd24f53694c0] ::1 - - [22/Apr/2019:12:07:03 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[453071be-ca81-4d7c-837c-91a286c43e93] ::1 - - [22/Apr/2019:12:07:07 +0000] \"POST /login HTTP/1.1\" 404 286 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[f4a72f05-62c0-4e93-b524-5d48de2a9682] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[f4a72f05-62c0-4e93-b524-5d48de2a9682] ::1 - - [22/Apr/2019:12:07:42 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[1c203336-0857-4b13-bd70-ec707dd6e007] ::1 - - [22/Apr/2019:12:07:43 +0000] \"GET /v1/login HTTP/1.1\" 200 894 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[c9b1c1fb-2017-4291-8fe6-3c9aef6c2472] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[c9b1c1fb-2017-4291-8fe6-3c9aef6c2472] ::1 - - [22/Apr/2019:12:07:43 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:07:43 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[a31e5e09-ecc6-44ab-bf85-0de97aef3f38] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[2a4a9aa7-3073-4674-b92f-276ab60baba0] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[2a4a9aa7-3073-4674-b92f-276ab60baba0] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[10907a25-10a5-4126-abf4-13f65fd7d71c] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[5cf5f7ef-1002-4130-be44-f9612adc40b2] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[5cf5f7ef-1002-4130-be44-f9612adc40b2] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[db1281ed-0e4b-41b0-b463-e3d8820034e7] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[1530644b-46c6-4390-b35a-6e4adca076d7] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[1530644b-46c6-4390-b35a-6e4adca076d7] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[f3761d7a-207e-43f5-a91a-ff92d91b2ca1] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[42b9acca-7a86-496b-8ffb-d305b172b71d] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[42b9acca-7a86-496b-8ffb-d305b172b71d] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:07:44 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[446897ae-c647-424a-b0f8-4e65da54c480] ::1 - - [22/Apr/2019:12:07:45 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[cdcb2eca-7e55-4554-b52d-01fb0ee94645] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[cdcb2eca-7e55-4554-b52d-01fb0ee94645] ::1 - - [22/Apr/2019:12:07:45 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [22/Apr/2019:12:07:45 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[6c46c0ae-b140-43fb-ac8c-840e6256df44] SERVER(Error-Middleware): secret is not defined","level":"error"}
+{"message":"[6c46c0ae-b140-43fb-ac8c-840e6256df44] ::1 - - [22/Apr/2019:12:07:55 +0000] \"POST /v1/login HTTP/1.1\" 500 295 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[8240defd-f525-4190-b61e-9a079de2313e] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[8240defd-f525-4190-b61e-9a079de2313e] ::1 - - [22/Apr/2019:12:10:02 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[efd1d0a7-dc6c-417a-9cd9-44c5d3cfa4af] ::1 - - [22/Apr/2019:12:10:16 +0000] \"POST /v1/login HTTP/1.1\" 200 257 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[d045e8c4-566d-467d-b259-8ba30dd899bd] AuthMiddleware(middleware::auth): secret or public key must be provided","level":"error"}
+{"message":"[d045e8c4-566d-467d-b259-8ba30dd899bd] ::1 - - [22/Apr/2019:12:11:55 +0000] \"POST /v1/users HTTP/1.1\" 401 422 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[64cec5b0-ace6-4ec2-a3cd-4724767bea01] AuthMiddleware(middleware::auth): AuthPayloadModel is not defined","level":"error"}
+{"message":"[64cec5b0-ace6-4ec2-a3cd-4724767bea01] ::1 - - [22/Apr/2019:12:12:34 +0000] \"POST /v1/users HTTP/1.1\" 500 447 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"[0bbd7fae-8e46-4fa2-8fdc-a82d77656fc8] AuthMiddleware(middleware::auth): AuthPayloadModel is not defined","level":"error"}
+{"message":"[0bbd7fae-8e46-4fa2-8fdc-a82d77656fc8] ::1 - - [22/Apr/2019:12:14:55 +0000] \"POST /v1/users HTTP/1.1\" 500 449 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[6bdf14fc-5c29-4f31-a336-d1aaffe064a9] ::1 - - [22/Apr/2019:12:17:07 +0000] \"POST /v1/users HTTP/1.1\" 200 41 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[cf912c44-520c-481e-8ae4-b885ea08823d] SERVER(Error-Middleware): evUniqueID is not defined","level":"error"}
+{"message":"[cf912c44-520c-481e-8ae4-b885ea08823d] ::1 - - [22/Apr/2019:12:20:12 +0000] \"POST /v1/users HTTP/1.1\" 500 300 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[893f3d17-eaf7-41c5-95df-0bb25f8a462b] SERVER(Error-Middleware): Username/Email is Already Exits","level":"error"}
+{"message":"[893f3d17-eaf7-41c5-95df-0bb25f8a462b] ::1 - - [22/Apr/2019:12:26:20 +0000] \"POST /v1/users HTTP/1.1\" 500 306 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[7a9e8aaa-9ccd-4194-9308-c247fdec2dd9] bodyparam: [object Object] - URL:undefined ,(Mon Apr 22 2019 18:02:40 GMT+0530 (India Standard Time)): User Signup","level":"error"}
+{"message":"[7a9e8aaa-9ccd-4194-9308-c247fdec2dd9] SERVER(Error-Middleware): Username/Email is Already Exits","level":"error"}
+{"message":"[7a9e8aaa-9ccd-4194-9308-c247fdec2dd9] ::1 - - [22/Apr/2019:12:32:45 +0000] \"POST /v1/users HTTP/1.1\" 500 305 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[b3587484-f24a-4cf7-9e39-4d234429e511] bodyparam: [object Object] - URL:undefined ,(Mon Apr 22 2019 18:05:25 GMT+0530 (India Standard Time)): User sharad Signup","level":"info"}
+{"message":"[b3587484-f24a-4cf7-9e39-4d234429e511] SERVER(Error-Middleware): Username/Email is Already Exits","level":"error"}
+{"message":"[b3587484-f24a-4cf7-9e39-4d234429e511] ::1 - - [22/Apr/2019:12:36:15 +0000] \"POST /v1/users HTTP/1.1\" 500 306 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[4b843b19-6f45-47ba-b6ab-88eaacd35f7d] bodyparam: {\"username\":\"sharad\",\"email\":\"sharad@gmail.com\",\"mobile\":\"964-804-2036\",\"password\":\"sharad@123\",\"address\":\"nagar\"} - URL:/v1/users ,(Mon Apr 22 2019 18:06:45 GMT+0530 (India Standard Time)): User sharad Signup","level":"info"}
+{"message":"[4b843b19-6f45-47ba-b6ab-88eaacd35f7d] SERVER(Error-Middleware): Username/Email is Already Exits","level":"error"}
+{"message":"[4b843b19-6f45-47ba-b6ab-88eaacd35f7d] ::1 - - [22/Apr/2019:12:36:48 +0000] \"POST /v1/users HTTP/1.1\" 500 305 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[8ab18c34-4016-41f4-ba1a-659cfd431604] SERVER(Error-Middleware): Username/Email is Already Exits","level":"error"}
+{"message":"[8ab18c34-4016-41f4-ba1a-659cfd431604] ::1 - - [22/Apr/2019:12:38:04 +0000] \"POST /v1/users HTTP/1.1\" 500 305 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[1057bfa2-09a3-4a50-b47c-c601ff20aca0] bodyparam: {\"username\":\"sharad1234\",\"email\":\"sharad1234@gmail.com\",\"mobile\":\"964-804-2036\",\"password\":\"sharad1234\",\"address\":\"nagar\"} - URL:/v1/users ,(Mon Apr 22 2019 18:20:46 GMT+0530 (India Standard Time)): Inside Users Route: create user","level":"info"}
+{"message":"[1057bfa2-09a3-4a50-b47c-c601ff20aca0] body: {\"username\":\"sharad1234\",\"email\":\"sharad1234@gmail.com\",\"mobile\":\"964-804-2036\",\"password\":\"sharad1234\",\"address\":\"nagar\"} - URL:/v1/users ,(Mon Apr 22 2019 18:20:46 GMT+0530 (India Standard Time)): Inside userservice: create user","level":"info"}
+{"message":"[1057bfa2-09a3-4a50-b47c-c601ff20aca0] ::1 - - [22/Apr/2019:12:50:50 +0000] \"POST /v1/users HTTP/1.1\" 200 41 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[5762dedd-f8e0-4b75-8913-98fb1bb9e8ff] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[5762dedd-f8e0-4b75-8913-98fb1bb9e8ff] ::1 - - [22/Apr/2019:12:56:58 +0000] \"GET /v1/users HTTP/1.1\" 401 422 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"[de4f1dcf-1e7c-48e1-b801-fc121c068fd9] - URL:/v1/users ,(Mon Apr 22 2019 18:27:51 GMT+0530 (India Standard Time)): Inside User Ruoter: getEmployee list","level":"info"}
+{"message":"[de4f1dcf-1e7c-48e1-b801-fc121c068fd9] - URL:/v1/users ,(Mon Apr 22 2019 18:27:51 GMT+0530 (India Standard Time)): Inside userservice: getEmployeeList","level":"info"}
+{"message":"[de4f1dcf-1e7c-48e1-b801-fc121c068fd9] ::1 - - [22/Apr/2019:12:57:51 +0000] \"GET /v1/users HTTP/1.1\" 200 753 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[1da70a1f-2701-4927-b752-6f986eca8369] body: {\"id\":\"test2\"} - URL:/v1/users/test2 ,(Mon Apr 22 2019 18:34:08 GMT+0530 (India Standard Time)): Inside User Route:Get user info by username","level":"info"}
+{"message":"[1da70a1f-2701-4927-b752-6f986eca8369] body: test2 - URL:/v1/users/test2 ,(Mon Apr 22 2019 18:34:08 GMT+0530 (India Standard Time)): inside  userservice: getUserbyID","level":"info"}
+{"message":"[1da70a1f-2701-4927-b752-6f986eca8369] ::1 - - [22/Apr/2019:13:04:08 +0000] \"GET /v1/users/test2 HTTP/1.1\" 200 156 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[9bc7a647-fbf0-4669-af3f-46a0cbb4420a] AuthMiddleware(middleware::auth): invalid signature","level":"error"}
+{"message":"[9bc7a647-fbf0-4669-af3f-46a0cbb4420a] ::1 - - [22/Apr/2019:13:09:40 +0000] \"DELETE /v1/users/test2 HTTP/1.1\" 401 422 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"[b5a90b24-4ab1-44cb-9848-ec1be681128a] body: {\"id\":\"test2\"} - URL:/v1/users/test2 ,(Mon Apr 22 2019 18:40:13 GMT+0530 (India Standard Time)): Inside User Route:Delete user by username","level":"info"}
+{"message":"[b5a90b24-4ab1-44cb-9848-ec1be681128a] - body: test2 - URL:/v1/users/test2 ,(Mon Apr 22 2019 18:40:13 GMT+0530 (India Standard Time)): inside userservice: deleteuserbyID","level":"info"}
+{"message":"[b5a90b24-4ab1-44cb-9848-ec1be681128a] ::1 - - [22/Apr/2019:13:10:13 +0000] \"DELETE /v1/users/test2 HTTP/1.1\" 200 43 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[dcfa63da-30c0-4011-ac35-3d7d246e49c2] body: {\"username\":\"year2019\",\"info\":\"shirapur\"} - URL:/v1/users ,(Mon Apr 22 2019 18:44:34 GMT+0530 (India Standard Time)): Inside User Route:Update user by flag","level":"info"}
+{"message":"[dcfa63da-30c0-4011-ac35-3d7d246e49c2] - body: [object Object] - URL:/v1/users ,(Mon Apr 22 2019 18:44:34 GMT+0530 (India Standard Time)): Inside userservice: updateUser","level":"info"}
+{"message":"[dcfa63da-30c0-4011-ac35-3d7d246e49c2] ::1 - - [22/Apr/2019:13:14:34 +0000] \"PUT /v1/users HTTP/1.1\" 200 49 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[6c5a5697-f6e7-40b6-8622-cee34d2cbd0b] body: {\"username\":\"night123\",\"email\":\"night123@gmail.com\",\"mobile\":\"964-804-2036\",\"password\":\"night123\",\"address\":\"night123\"} - URL:/v1/users ,(Mon Apr 22 2019 18:47:57 GMT+0530 (India Standard Time)): Inside Users Route: create user","level":"info"}
+{"message":"[6c5a5697-f6e7-40b6-8622-cee34d2cbd0b]- body: [object Object] - URL:/v1/users ,(Mon Apr 22 2019 18:47:57 GMT+0530 (India Standard Time)): Inside userservice: create user","level":"info"}
+{"message":"[6c5a5697-f6e7-40b6-8622-cee34d2cbd0b] ::1 - - [22/Apr/2019:13:17:58 +0000] \"POST /v1/users HTTP/1.1\" 200 41 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"[835fba22-b0da-447a-adbf-71d55f2593b5] body: {\"id\":\"test2\"} - URL:/v1/users/test2 ,(Mon Apr 22 2019 18:48:06 GMT+0530 (India Standard Time)): Inside User Route:Get user info by username","level":"info"}
+{"message":"[835fba22-b0da-447a-adbf-71d55f2593b5] - body: test2 - URL:/v1/users/test2 ,(Mon Apr 22 2019 18:48:06 GMT+0530 (India Standard Time)): inside  userservice: getUserbyID","level":"info"}
+{"message":"[835fba22-b0da-447a-adbf-71d55f2593b5] ::1 - - [22/Apr/2019:13:18:06 +0000] \"GET /v1/users/test2 HTTP/1.1\" 200 46 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"[b313ab01-f42e-46bf-84e7-9f9352b962d7] body: {\"id\":\"test2\"} - URL:/v1/users/test2 ,(Mon Apr 22 2019 18:48:34 GMT+0530 (India Standard Time)): Inside User Route:Get user info by username","level":"info"}
+{"message":"[b313ab01-f42e-46bf-84e7-9f9352b962d7] - body: test2 - URL:/v1/users/test2 ,(Mon Apr 22 2019 18:48:34 GMT+0530 (India Standard Time)): inside  userservice: getUserbyID","level":"info"}
+{"message":"[b313ab01-f42e-46bf-84e7-9f9352b962d7] ::1 - - [22/Apr/2019:13:18:34 +0000] \"GET /v1/users/test2 HTTP/1.1\" 200 46 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"[c6fcbbc7-fdac-4f3a-9dd1-12bfb55f7f8b] - URL:/v1/users ,(Mon Apr 22 2019 18:48:41 GMT+0530 (India Standard Time)): Inside User Ruoter: getEmployee list","level":"info"}
+{"message":"[c6fcbbc7-fdac-4f3a-9dd1-12bfb55f7f8b] - URL:/v1/users ,(Mon Apr 22 2019 18:48:41 GMT+0530 (India Standard Time)): Inside userservice: getEmployeeList","level":"info"}
+{"message":"[c6fcbbc7-fdac-4f3a-9dd1-12bfb55f7f8b] ::1 - - [22/Apr/2019:13:18:41 +0000] \"GET /v1/users HTTP/1.1\" 200 762 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"[07127e2e-6c99-445d-a8df-cf40b70ced5f] body: {\"id\":\"night123\"} - URL:/v1/users/night123 ,(Mon Apr 22 2019 18:48:48 GMT+0530 (India Standard Time)): Inside User Route:Get user info by username","level":"info"}
+{"message":"[07127e2e-6c99-445d-a8df-cf40b70ced5f] - body: night123 - URL:/v1/users/night123 ,(Mon Apr 22 2019 18:48:48 GMT+0530 (India Standard Time)): inside  userservice: getUserbyID","level":"info"}
+{"message":"[07127e2e-6c99-445d-a8df-cf40b70ced5f] ::1 - - [22/Apr/2019:13:18:48 +0000] \"GET /v1/users/night123 HTTP/1.1\" 200 165 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"[81e2f7aa-915d-4a03-bf96-61961481f43c] body: {\"id\":\"night123\"} - URL:/v1/users/night123 ,(Mon Apr 22 2019 18:48:55 GMT+0530 (India Standard Time)): Inside User Route:Delete user by username","level":"info"}
+{"message":"[81e2f7aa-915d-4a03-bf96-61961481f43c] - body: night123 - URL:/v1/users/night123 ,(Mon Apr 22 2019 18:48:55 GMT+0530 (India Standard Time)): inside userservice: deleteuserbyID","level":"info"}
+{"message":"[81e2f7aa-915d-4a03-bf96-61961481f43c] ::1 - - [22/Apr/2019:13:18:55 +0000] \"DELETE /v1/users/night123 HTTP/1.1\" 200 43 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[0642b955-856b-478f-b13d-cbbfcfec9669] body: {\"id\":\"night123\"} - URL:/v1/users/night123 ,(Mon Apr 22 2019 18:50:20 GMT+0530 (India Standard Time)): Inside User Route:Get user info by username","level":"info"}
+{"message":"[0642b955-856b-478f-b13d-cbbfcfec9669] SERVER(Error-Middleware): Database Connection Error","level":"error"}
+{"message":"[0642b955-856b-478f-b13d-cbbfcfec9669] ::1 - - [22/Apr/2019:13:20:20 +0000] \"GET /v1/users/night123 HTTP/1.1\" 500 305 \"-\" \"PostmanRuntime/7.6.1\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[74e829b9-f15e-4223-a3dd-fdc5369f3b7b] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[74e829b9-f15e-4223-a3dd-fdc5369f3b7b] ::1 - - [22/Apr/2019:13:34:39 +0000] \"GET / HTTP/1.1\" 401 415 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[ec657b82-fe79-43b3-bb2b-38695c73ecc6] ::1 - - [22/Apr/2019:13:34:48 +0000] \"GET /v1/registration HTTP/1.1\" 200 1321 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[62b63d3a-bb45-4e08-9ede-ebe7f89ab230] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[62b63d3a-bb45-4e08-9ede-ebe7f89ab230] ::1 - - [22/Apr/2019:13:34:48 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[6aeccf8b-2075-4fe3-b024-5ada30a0995e] SERVER(Error-Middleware): Cannot read property 'evUniqueID' of undefined","level":"error"}
+{"message":"[6aeccf8b-2075-4fe3-b024-5ada30a0995e] ::1 - - [22/Apr/2019:13:35:12 +0000] \"POST /v1/registration HTTP/1.1\" 500 325 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[3d133940-a3b8-4064-99d5-1d4706b3284b] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[3d133940-a3b8-4064-99d5-1d4706b3284b] ::1 - - [22/Apr/2019:13:36:54 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[f395e2ba-6b88-4b5e-b98a-a2452402bbf4] SERVER(Error-Middleware): Cannot read property 'evUniqueID' of undefined","level":"error"}
+{"message":"[f395e2ba-6b88-4b5e-b98a-a2452402bbf4] ::1 - - [22/Apr/2019:13:36:56 +0000] \"POST /v1/registration HTTP/1.1\" 500 325 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[c307a648-0929-4cfe-81b4-3421ca002c3a] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[c307a648-0929-4cfe-81b4-3421ca002c3a] ::1 - - [22/Apr/2019:13:38:29 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[abb91d90-ca85-4c02-abe7-edf77a4125c8] SERVER(Error-Middleware): Failed to lookup view \"index\" in views directory \"d:\\task1\\basicStructure\\views\"","level":"error"}
+{"message":"[abb91d90-ca85-4c02-abe7-edf77a4125c8] ::1 - - [22/Apr/2019:13:38:32 +0000] \"POST /v1/registration HTTP/1.1\" 500 366 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[3dc02f25-3bd3-4762-8882-bbd28ee2c305] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[3dc02f25-3bd3-4762-8882-bbd28ee2c305] ::1 - - [22/Apr/2019:13:39:18 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[3eeda224-9c11-4a26-bc62-3646c4143a74] SERVER(Error-Middleware): Username/Email is Already Exits","level":"error"}
+{"message":"[3eeda224-9c11-4a26-bc62-3646c4143a74] ::1 - - [22/Apr/2019:13:39:20 +0000] \"POST /v1/registration HTTP/1.1\" 500 310 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[a9be3b48-536b-4060-8c61-af7c0e2f255a] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[a9be3b48-536b-4060-8c61-af7c0e2f255a] ::1 - - [22/Apr/2019:13:39:25 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[b4c7d116-4882-4d4e-bfdc-6927109dd4e0] ::1 - - [22/Apr/2019:13:39:32 +0000] \"POST /v1/registration HTTP/1.1\" 200 1343 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[6fbf8c82-101f-4e94-9b75-833f3e3c237c] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[6fbf8c82-101f-4e94-9b75-833f3e3c237c] ::1 - - [22/Apr/2019:13:39:32 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[e10d1bc2-1465-4197-b9b6-920cbe120f4a] ::1 - - [22/Apr/2019:13:39:35 +0000] \"GET /v1/login HTTP/1.1\" 200 903 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[bf34fc49-1c0d-4781-8aae-9806009ade8c] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[bf34fc49-1c0d-4781-8aae-9806009ade8c] ::1 - - [22/Apr/2019:13:39:35 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[2eb1e5c0-c602-4925-98b6-d3c41317d7df] ::1 - - [22/Apr/2019:13:39:36 +0000] \"GET /v1/registration HTTP/1.1\" 200 1321 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[8d4733b1-db06-4139-9f73-6841bdc10271] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[8d4733b1-db06-4139-9f73-6841bdc10271] ::1 - - [22/Apr/2019:13:39:36 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
