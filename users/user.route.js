@@ -1,11 +1,13 @@
 const express = require('express');
-const userroute = express.Router();
 const paramValidator = require('./user.model');
 const userservice = require('./user.service');
 const middlewareHandler = require('../errorcodes/errorhandler');
 const logger = require('../config/winston.config');
 
-userroute.post('/', middlewareHandler(async (req, res, next) => {
+const userRoute = express.Router();
+
+
+userRoute.post('/', middlewareHandler(async (req, res, next) => {
 
   logger.info(`[${req.evUniqueID}] body: ${JSON.stringify(req.body)} - URL:${req.originalUrl} ,(${req._startTime}): Inside Users Route: create user`);
 
@@ -28,7 +30,7 @@ userroute.post('/', middlewareHandler(async (req, res, next) => {
 }));
 
 
-userroute.get('/', middlewareHandler(async (req, res, next) => {
+userRoute.get('/', middlewareHandler(async (req, res, next) => {
 
   logger.info(`[${req.evUniqueID}] - URL:${req.originalUrl} ,(${req._startTime}): Inside User Ruoter: getEmployee list`);
   const loginfo = {
@@ -36,12 +38,13 @@ userroute.get('/', middlewareHandler(async (req, res, next) => {
     originalUrl: req.originalUrl,
     _startTime: req._startTime
   }
-  var data = await userservice.getEmployeeList(loginfo);
+
+  var data = await userservice.getEmployeeList(req.evUniqueID, loginfo);
   res.status(200).json({ msg: 'Fetch listrecord successfully', data: data });
 
 }));
 
-userroute.get('/:id', middlewareHandler(async (req, res, next) => {
+userRoute.get('/:id', middlewareHandler(async (req, res, next) => {
 
   logger.info(`[${req.evUniqueID}] body: ${JSON.stringify(req.params)} - URL:${req.originalUrl} ,(${req._startTime}): Inside User Route:Get user info by username`);
   const loginfo = {
@@ -50,36 +53,36 @@ userroute.get('/:id', middlewareHandler(async (req, res, next) => {
     _startTime: req._startTime
   }
 
-  const userdata = await userservice.getUserbyID({data:req.params.id,loginfo:loginfo});
+  const userdata = await userservice.getUserbyID({ data: req.params.id, loginfo: loginfo });
   return res.status(200).json({ data: userdata.rows, msg: "user info get successfully" });
 }));
 
-userroute.delete('/:id', middlewareHandler(async (req, res, next) => {
+userRoute.delete('/:id', middlewareHandler(async (req, res, next) => {
   logger.info(`[${req.evUniqueID}] body: ${JSON.stringify(req.params)} - URL:${req.originalUrl} ,(${req._startTime}): Inside User Route:Delete user by username`);
- 
+
   const loginfo = {
     evUniqueID: req.evUniqueID,
     originalUrl: req.originalUrl,
     _startTime: req._startTime
   }
-  const deleteuser = await userservice.deleteuserbyID({id:req.params.id, loginfo:loginfo});
+  const deleteuser = await userservice.deleteuserbyID({ id: req.params.id, loginfo: loginfo });
   return res.status(200).json({ data: deleteuser.rowCount, msg: "User delete Successfully" });
 }));
 
-userroute.put('/', middlewareHandler(async (req, res, next) => {
+userRoute.put('/', middlewareHandler(async (req, res, next) => {
 
 
   logger.info(`[${req.evUniqueID}] body: ${JSON.stringify(req.body)} - URL:${req.originalUrl} ,(${req._startTime}): Inside User Route:Update user by flag`);
- const loginfo = {
+  const loginfo = {
     evUniqueID: req.evUniqueID,
     originalUrl: req.originalUrl,
     _startTime: req._startTime
   }
 
-  const update = await userservice.updateUser({data:req.body,loginfo:loginfo});
+  const update = await userservice.updateUser({ data: req.body, loginfo: loginfo });
   return res.status(200).json({ data: update.rowCount, msg: "User data updated successfully" });
 }));
 
 
-module.exports = userroute;
+module.exports = userRoute;
 

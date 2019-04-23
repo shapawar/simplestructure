@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-//const winston = require('../config/winston.config');
+const winston = require('../config/winston.config');
 
 const APIResponseModel = require('../models/apiresponse.model');
 const TaskMetaDataModel = require('../models/task.metadata.model');
