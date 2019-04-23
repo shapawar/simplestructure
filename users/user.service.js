@@ -130,8 +130,8 @@ const getUserbyID = async (evUniqueID, userid) => {
         logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.message}`);
         throw error;
     }
-
 }
+
 
 /**
  * 
@@ -222,4 +222,4 @@ const userService = {
     updateUser
 }
 
-module.exports = userService
+module.exports = userService;
