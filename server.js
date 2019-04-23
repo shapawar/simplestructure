@@ -18,6 +18,7 @@ const TaskMetaDataModel = require('./models/task.metadata.model');
 const usersrouter = require('./users/user.route');
 const userlogin = require('./login/login.route');
 const usersignup = require('./registration/signup.router');
+const pingRoute = require('./ping/ping.route');
 
 const apiRouter = express.Router();
 
@@ -33,7 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.set('view engine','ejs');
+app.set('view engine', 'ejs');
 
 //middlewares
 app.use(require('./middlewares/default.middleware'));
@@ -41,43 +42,13 @@ app.use(require('./middlewares/auth.middleware'));
 
 // root route
 app.use(`/${process.env.APIVERSION}`, apiRouter);
+apiRouter.use(`/ping`, pingRoute);
 apiRouter.use(`/errorcodes`, apiRouter);
 apiRouter.use(`/users`, usersrouter);
-apiRouter.use('/login',userlogin);
-app.use('/',userlogin);
-apiRouter.use('/registration',usersignup);
+apiRouter.use('/login', userlogin);
+app.use('/', userlogin);
+apiRouter.use('/registration', usersignup);
 
-// default ping
-apiRouter.get('/ping', (req, res) => {
-  const taskName = '/ping';
-
-  let httpRetVal = 200; //default
-
-  // create response and task
-  const apiResp = new APIResponseModel();
-  let task = TaskMetaDataModel.createTask('/ping', 'HEALTHCHECK');
-
-  try {
-    winston.debug(`[${req.evUniqueID}] (${taskName}) - PING`);
-
-    // add metadata task
-    apiResp.metadata = res.locals.apiMeta; // from default middleware
-    task = apiResp.metadata.tasks[apiResp.metadata.tasks.push(task) - 1]; // SchemaObject array clones the object - so get the reference back
-
-    // end task
-    task.endTask();
-
-    apiResp.metadata.endMetaData(req.evUniqueID, 0, 'OK');
-  } catch (e) {
-    // error
-    httpRetVal = 400;
-    winston.error(`[${req.evUniqueID}] (${taskName}) - ${e.message}`);
-
-    apiResp.metadata.endMetaData(req.evUniqueID, 1, e.message);
-  } finally {
-    res.status(httpRetVal).send(apiResp);
-  }
-});
 
 // additional route for development use only
 if (process.env.NODE_ENV === 'development') {
