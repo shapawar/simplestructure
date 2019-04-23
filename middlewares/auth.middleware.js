@@ -16,6 +16,7 @@ const SKIPAUTH = [
     '/ping',
     '/login',
     '/registration',
+    '/',
     '/apiutils/',
     'favicon.ico'
 ];

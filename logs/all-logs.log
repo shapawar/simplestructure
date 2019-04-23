@@ -297,3 +297,45 @@
 {"message":"[2eb1e5c0-c602-4925-98b6-d3c41317d7df] ::1 - - [22/Apr/2019:13:39:36 +0000] \"GET /v1/registration HTTP/1.1\" 200 1321 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
 {"message":"[8d4733b1-db06-4139-9f73-6841bdc10271] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
 {"message":"[8d4733b1-db06-4139-9f73-6841bdc10271] ::1 - - [22/Apr/2019:13:39:36 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 401 435 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[05f4b942-8747-46b4-b914-dbdc4b93e396] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[05f4b942-8747-46b4-b914-dbdc4b93e396] ::1 - - [23/Apr/2019:04:24:22 +0000] \"GET / HTTP/1.1\" 401 415 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[75e8224c-d447-4e5a-9fc8-a7a43756bb0e] ErrorCodesService(getErrorInformation): Unknown error code: 14","level":"error"}
+{"message":"[75e8224c-d447-4e5a-9fc8-a7a43756bb0e] ::1 - - [23/Apr/2019:04:24:23 +0000] \"GET / HTTP/1.1\" 401 414 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[75f72361-05f8-4776-ac89-e66d1c78bd64] ::1 - - [23/Apr/2019:04:31:49 +0000] \"GET / HTTP/1.1\" 404 281 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [23/Apr/2019:04:31:49 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[bea54133-ccb1-42b7-8632-b3b52acfa78d] ::1 - - [23/Apr/2019:04:31:51 +0000] \"GET / HTTP/1.1\" 404 281 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [23/Apr/2019:04:31:51 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[c5fba408-7e11-47b5-9f46-8c8dba40986b] ::1 - - [23/Apr/2019:04:34:07 +0000] \"GET / HTTP/1.1\" 200 903 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[78a6496d-2ba8-4164-8257-18467351bccf] ::1 - - [23/Apr/2019:04:34:07 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 404 302 \"http://localhost:8080/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [23/Apr/2019:04:34:07 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[7798c17b-025d-4c3b-bd16-88d62723bbee] ::1 - - [23/Apr/2019:04:34:09 +0000] \"GET /v1/registration HTTP/1.1\" 304 - \"http://localhost:8080/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[0fd44230-707b-4ec4-aaae-267a6c960933] ::1 - - [23/Apr/2019:04:34:09 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 404 302 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[a684d9ad-552a-43f1-b101-d6e3de56e3ce] ::1 - - [23/Apr/2019:04:34:12 +0000] \"GET /v1/login HTTP/1.1\" 304 - \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[0375fc11-51fd-4494-9b8e-e87379b64e15] ::1 - - [23/Apr/2019:04:34:12 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 404 302 \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[40c8add3-6fdc-4bf7-812d-02b8380c1915] ::1 - - [23/Apr/2019:04:34:14 +0000] \"GET /v1/registration HTTP/1.1\" 304 - \"http://localhost:8080/v1/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[8bf248be-ff63-459c-a10a-73615562957d] ::1 - - [23/Apr/2019:04:34:14 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 404 302 \"http://localhost:8080/v1/registration\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[04b199fa-6485-4a35-8033-291dd64aa8e4] ::1 - - [23/Apr/2019:04:34:29 +0000] \"GET /v1/ping HTTP/1.1\" 200 377 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
