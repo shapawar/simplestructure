@@ -7,7 +7,7 @@
 
 let config = {
     "development": {
-        "CONSTRING": 'postgress://postgres:admin2518@localhost:5432/nodees5'
+        "CONSTRING": `postgress://${process.env.dbuser}:${process.env.dbpass}@${process.env.dbhost}:${process.env.dbport}/${process.env.dbname}`
     },
     "staging": {
 

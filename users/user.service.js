@@ -6,41 +6,66 @@ const dbPool = require('../config/dbconfig');
 const logger = require('../config/winston.config');
 
 
+/**
+ * 
+ * @param {*} evUniqueID req unique id
+ * @param {*} data req data
+ */
+const createUser = async (evUniqueID, data) => {
+    const taskName = 'createUser';
 
-// exports.createUser = async (data) => {
-//     if (dbcon._connected === true && dbcon._connectionError === false) {
-//         let logdata = data.logger;
-//         logger.info(`[${logdata.evUniqueID}]- body: ${data.params} - URL:${logdata.originalUrl} ,(${logdata._startTime}): Inside userservice: create user`);
+    try {
 
-//         const { username, email, mobile, password, address } = data.params;
-//         try {
-//             let savedata = await dbcon.query("select register('" + username + "','" + email + "','" + mobile + "','" + password + "','" + address + "')");
-//             return savedata;
-//         } catch (error) {
-//             throw error;
-//         }
-//     } else {
-//         throw { message: "Database Connection Error" }
-//     }
-// }
+        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(data)}`);
+        const { username, email, mobile, password, address } = data;
+
+        return new Promise((resolve, reject) => {
+
+            dbPool.connect((err, client, release) => {
+
+                if (err) {
+                    logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${err.stack}`);
+                    logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName}): CONN-ERR: ${err.message}`);
+                    return reject(err);
+                }
+
+                client.query("select register('" + username + "','" + email + "','" + mobile + "','" + password + "','" + address + "')", (qErr, result) => {
+                    release();
+                    if (qErr) {
+                        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.stack}`);
+                        logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.message}`);
+
+                        return reject(qErr);
+                    }
+                    return resolve(result);
+                });
+            })
+        });
+    } catch (error) {
+        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${error.stack}`);
+        logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${error.message}`);
+        throw error;
+    }
+}
 
 /**
  * 
  * @param {*} evUniqueID req unique id
  * @param {*} logdata req data
  */
-const getEmployeeList = (evUniqueID, logdata) => {
+const getEmployeeList = (evUniqueID) => {
     const taskName = 'getEmployeeList';
 
     try {
-        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(logdata)}`);
+        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: null`);
 
         return new Promise((resolve, reject) => {
             // query
             dbPool.connect((err, client, release) => {
                 // exit if error
                 if (err) {
-                    logger.error(`[${evUniqueID}] ${MODULENAME}(${taskName}): CONN-ERR: ${err.message}`);
+                    logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.stack}`);
+                    logger.error(`[${evUniqueID}] -${MODULENAME}(${taskName}): CONN-ERR: ${err.message}`);
                     return reject(err);
                 }
 
@@ -53,82 +78,148 @@ const getEmployeeList = (evUniqueID, logdata) => {
 
                         return reject(qErr);
                     }
-
-                    resolve(res);
+                    return resolve(res);
                     //client.end()
                 });
-
-
             })
-
         })
-
     } catch (e) {
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${err.stack}`);
         logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${err.message}`);
-
         throw e;
+    }
+}
+
+
+/**
+ * 
+ * @param {*} evUniqueID req unique id
+ * @param {*} userid req data
+ */
+const getUserbyID = async (evUniqueID, userid) => {
+
+    const taskName = "getUserbyID";
+
+    try {
+        logger.debug(`[${evUniqueID}]-${MODULENAME} (${taskName}- queryData: ${userid})`);
+
+        return new Promise((resolve, reject) => {
+            dbPool.connect((err, client, release) => {
+                if (err) {
+                    logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.stack}`);
+                    logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.message}`);
+                    return reject(err);
+                }
+
+                client.query("SELECT  * from getemployee('" + userid + "')", (qErr, result) => {
+                    release();
+                    if (qErr) {
+                        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.stack}`);
+                        logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.message}`);
+
+                        return reject(qErr);
+                    }
+                    return resolve(result);
+                });
+
+            });
+        });
+
+    } catch (error) {
+        logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.stack}`);
+        logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.message}`);
+        throw error;
+    }
+}
+
+
+/**
+ * 
+ * @param {*} evUniqueID req unique id
+ * @param {*} data is req data
+ */
+const deleteuserbyID = async (evUniqueID, data) => {
+
+    const taskName = "deleteuserbyID";
+    try {
+        logger.debug(`[${evUniqueID}]-${MODULENAME} (${taskName}- bodyParams: ${data})`);
+
+        return new Promise((resolve, reject) => {
+            dbPool.connect((err, client, release) => {
+
+                if (err) {
+                    logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.stack}`);
+                    logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.message}`);
+                    return reject(err);
+                }
+                client.query("SELECT public.deleteuserbyid('" + data + "')", (qErr, response) => {
+                    release();
+                    if (qErr) {
+                        logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${qErr.stack}`);
+                        logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${qErr.message}`);
+                        return reject(qErr);
+                    }
+                    return resolve(response);
+                });
+            });
+        })
+
+    } catch (error) {
+        logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.stack}`);
+        logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.message}`);
+        throw error;
     }
 
 }
 
+/**
+ * 
+ * @param {*} evUniqueID req unique id
+ * @param {*} data is req data
+ */
+const updateUser = async (evUniqueID, data) => {
 
+    const taskName = 'updateUser';
+    try {
+        logger.debug(`[${evUniqueID}]-${MODULENAME} (${taskName} - bodyParams: ${JSON.stringify(data)})`);
+        return new Promise((resolve, reject) => {
 
-// exports.getUserbyID = async (userid) => {
+            dbPool.connect((err, client, release) => {
+                if (err) {
+                    logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.stack}`);
+                    logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.message}`);
+                    return reject(err);
+                }
+                client.query("SELECT public.updateuser('" + data.username + "','" + data.address + "')", (qErr, result) => {
+                    release();
+                    if (qErr) {
+                        logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${qErr.stack}`);
+                        logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${qErr.message}`);
+                        return reject(qErr);
+                    }
+                    return resolve(result);
+                });
+            });
+        })
 
-//     if (dbcon._connected === true && dbcon._connectionError === false) {
-//         let logdata = userid.loginfo;
-//         logger.info(`[${logdata.evUniqueID}] - body: ${userid.data} - URL:${logdata.originalUrl} ,(${logdata._startTime}): inside  userservice: getUserbyID`);
-//         try {
-//             var userdata = await dbcon.query("SELECT  * from getemployee('" + userid.data + "')");
-//             return userdata;
-//         } catch (error) {
-//             throw error;
-//         }
-//     } else {
-//         throw { message: "Database Connection Error" }
-//     }
+    } catch (error) {
+        logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.stack}`);
+        logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.message}`);
+        throw error;
 
-// }
+    }
 
-// exports.deleteuserbyID = async (data) => {
-
-//     if (dbcon._connected === true && dbcon._connectionError === false) {
-//         let logdata = data.loginfo;
-//         logger.info(`[${logdata.evUniqueID}] - body: ${data.id} - URL:${logdata.originalUrl} ,(${logdata._startTime}): inside userservice: deleteuserbyID`);
-//         try {
-//             var deleteuser = await dbcon.query("SELECT public.deleteuserbyid('" + data.id + "')");
-//             return deleteuser;
-//         } catch (error) {
-//             throw error;
-//         }
-//     } else {
-//         throw { message: "Database Connection Error" }
-//     }
-// }
-
-// exports.updateUser = async (data) => {
-
-//     if (dbcon._connected === true && dbcon._connectionError === false) {
-//         let logdata = data.loginfo;
-//         logger.info(`[${logdata.evUniqueID}] - body: ${data.data.username} - URL:${logdata.originalUrl} ,(${logdata._startTime}): Inside userservice: updateUser`);
-//         try {
-//             const updateuser = await dbcon.query("SELECT public.updateuser('" + data.data.username + "','" + data.data.info + "')")
-//             return updateuser;
-//         } catch (error) {
-//             throw error;
-//         }
-//     } else {
-//         throw { message: "Database Connection Error" }
-//     }
-
-// }
+};
 
 /** 
  * user service 
 */
 const userService = {
-    getEmployeeList
+    getEmployeeList,
+    createUser,
+    getUserbyID,
+    deleteuserbyID,
+    updateUser
 }
 
-module.exports = userService
+module.exports = userService;

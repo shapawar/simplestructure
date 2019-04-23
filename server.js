@@ -46,7 +46,6 @@ apiRouter.use(`/ping`, pingRoute);
 apiRouter.use(`/errorcodes`, apiRouter);
 apiRouter.use(`/users`, usersrouter);
 apiRouter.use('/login', userlogin);
-app.use('/', userlogin);
 apiRouter.use('/registration', usersignup);
 
 
