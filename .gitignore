@@ -1,0 +1,6 @@
+# We don't want to push the node_modules
+node_modules/
+web/log/*.log
+nohup.out
+.vscode
+secured/.env

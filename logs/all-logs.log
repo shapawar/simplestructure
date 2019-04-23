@@ -339,3 +339,9 @@
 {"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
 {"message":"NODE_ENV\t: development","level":"info"}
 {"message":"[04b199fa-6485-4a35-8033-291dd64aa8e4] ::1 - - [23/Apr/2019:04:34:29 +0000] \"GET /v1/ping HTTP/1.1\" 200 377 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"API Version\t: v1","level":"info"}
+{"message":"API Port\t: 8080","level":"info"}
+{"message":"Build Version\t: --NOT AVAILABLE--","level":"info"}
+{"message":"NODE_ENV\t: development","level":"info"}
+{"message":"[444ed027-8c5a-40c4-a502-24d6f53f923c] ::1 - - [23/Apr/2019:05:34:21 +0000] \"GET /v1/ping HTTP/1.1\" 200 381 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
+{"message":"[--NOT AVAILABLE--] ::1 - - [23/Apr/2019:05:34:21 +0000] \"GET /favicon.ico HTTP/1.1\" 200 15086 \"http://localhost:8080/v1/ping\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\"","level":"info"}
