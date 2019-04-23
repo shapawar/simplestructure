@@ -1,16 +1,13 @@
-const pg = require('pg');
-var constring = 'postgress://postgres:admin2518@localhost:5432/nodees5';
-const client = new pg.Client(constring);
+'use strict';
 
-client.connect((err, client, data) => {
-    if (err) {
-        console.log(`Error in connecting db`);
-        return console.dir(err);
-        
-    } else {
-        console.log(`Database connection successfully!!`);
-    }
+const { Pool } = require('pg');
 
+/**
+ * Connection pool for MDM database
+ */
+const dbPool = new Pool({
+    "connectionString": process.env.CONSTRING,
+    "max": 10
 });
 
-module.exports = client;
+module.exports = dbPool;

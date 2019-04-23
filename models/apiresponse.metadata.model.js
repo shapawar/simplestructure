@@ -29,8 +29,8 @@ const APIResponseMetadataModel = new SchemaObject({
 
         // set the task information
         this.elapsedTimeInMS = moment(Date.now()).diff(this.requestTS, 'milliseconds');
-        this.errCode = errCode;
-        this.errMsg =errMessage;
+        this.errCode = errInfo.code;
+        this.errMsg = errInfo.message;
       }
     }
   });

@@ -16,7 +16,6 @@ const SKIPAUTH = [
     '/ping',
     '/login',
     '/registration',
-    '/',
     '/apiutils/',
     'favicon.ico'
 ];
@@ -72,20 +71,6 @@ module.exports = function (req, res, next) {
 
                     return res.status(401).send(apiResp);
                 }
-
-                /* // convert to object
-                const authData = new AuthPayloadModel(decoded);
-                req.authData = authData;
-                res.locals.authData = authData;
-
-                if (authData.apiKey === '') {
-                    logger.debug(`[${evUniqueID}] ${MODULENAME}(${taskName}): Missing API key`);
-
-                    task.endTask();
-                    apiResp.metadata.endMetaData(req.evUniqueID, 10, 'Missing API key');
-
-                    return res.status(401).send(apiResp);
-     */
                     req.decoded = decoded;
                     next();
                  
@@ -94,7 +79,7 @@ module.exports = function (req, res, next) {
             logger.debug(`[${evUniqueID}] ${MODULENAME}(${taskName}): Missing AUTH BEARER token`);
 
             task.endTask();
-            apiResp.metadata.endMetaData(req.evUniqueID, 14, 'Missing AUTH BEARER token');
+            apiResp.metadata.endMetaData(req.evUniqueID, 3, 'Missing AUTH BEARER token');
 
             res.status(401).send(apiResp);
         }

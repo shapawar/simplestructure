@@ -4,6 +4,7 @@
 * Load .env
 */
 require('dotenv').config({ "path": './secured/.env' });
+require('../config/config');
 
 /**
  * Module dependencies.
@@ -90,8 +91,8 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
 
-  winston.info(`API Version\t: ${ process.env.APIVERSION }`);
-  winston.info(`API Port\t: ${ addr.port }`);
-  winston.info(`Build Version\t: ${ process.env.npm_package_version || '--NOT AVAILABLE--' }`);
-  winston.info(`NODE_ENV\t: ${ process.env.NODE_ENV }`);
+  winston.info(`API Version\t: ${process.env.APIVERSION}`);
+  winston.info(`API Port\t: ${addr.port}`);
+  winston.info(`Build Version\t: ${process.env.npm_package_version || '--NOT AVAILABLE--'}`);
+  winston.info(`NODE_ENV\t: ${process.env.NODE_ENV}`);
 };
