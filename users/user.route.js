@@ -34,7 +34,7 @@ userRoute.get('/', middlewareHandler(async (req, res, next) => {
   logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(req.body)}`);
 
   var data = await userservice.getEmployeeList(req.evUniqueID);
-  res.status(200).json({ msg: 'Fetch listrecord successfully', data: data.rows });
+  res.status(200).json({ msg: 'Fetch record list successfully', data: data.rows });
 
 }));
 
