@@ -1,31 +1,28 @@
 {
-  "name": "dataexp-datainsights-webapi",
+  "name": "basic-node-structure",
   "version": "0.0.1",
-  "description": "EV Data Exploration Web API",
+  "description": "Web API",
   "main": "server.js",
   "scripts": {
+    "EXPRESS": "#################Express-commands#################",
     "devpcmode": "nodemon --max-old-space-size=3072 ./bin/www DECPC",
     "devservermode": "node ./bin/www DEVSERVER",
     "prodservermode": "node ./bin/www PRODSERVER",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "TESTING": "#################Express-Testing-commands#################",
+    "test": "mocha \"./{,!(node_modules)/**/}*.test.js\"",
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/evariant/dataexp-datainsights-webapi.git"
+    "url": "Repo URL"
   },
   "keywords": [
-    "data",
-    "exploration",
-    "market",
-    "exploration",
-    "data",
-    "insights",
     "rest",
     "api"
   ],
-  "author": "EV Platform Development Team",
+  "author": "Development Team",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/evariant/dataexp-datainsights-webapi#readme",
+  "homepage": "https://bitbucket.org/",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.5",
@@ -42,16 +39,13 @@
     "object-mapper": "^5.0.0",
     "pg": "^7.7.1",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2",
     "schema-object": "^4.0.11",
-    "snowflake-sdk": "^1.1.9",
     "uuid": "^3.3.2",
     "winston": "^3.1.0"
   },
   "devDependencies": {
-    "assert": "^1.4.1",
-    "expect": "^23.6.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "supertest": "^4.0.2"
   }
 }
