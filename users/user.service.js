@@ -15,32 +15,14 @@ const createUser = async (evUniqueID, data) => {
     const taskName = 'createUser';
 
     try {
-
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(data)}`);
         const { username, email, mobile, password, address } = data;
 
-        return new Promise((resolve, reject) => {
+        let client = await dbPool.connect();
+        let inserQuery = await client.query(`select register('${username}','${email}','${mobile}','${password}','${address}')`);
+        client.release();
+        return inserQuery;
 
-            dbPool.connect((err, client, release) => {
-
-                if (err) {
-                    logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${err.stack}`);
-                    logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName}): CONN-ERR: ${err.message}`);
-                    return reject(err);
-                }
-
-                client.query("select register('" + username + "','" + email + "','" + mobile + "','" + password + "','" + address + "')", (qErr, result) => {
-                    release();
-                    if (qErr) {
-                        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.stack}`);
-                        logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.message}`);
-
-                        return reject(qErr);
-                    }
-                    return resolve(result);
-                });
-            })
-        });
     } catch (error) {
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${error.stack}`);
         logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${error.message}`);
@@ -53,36 +35,17 @@ const createUser = async (evUniqueID, data) => {
  * @param {*} evUniqueID req unique id
  * @param {*} logdata req data
  */
-const getEmployeeList = (evUniqueID) => {
+const getEmployeeList = async(evUniqueID) => {
     const taskName = 'getEmployeeList';
 
     try {
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: null`);
 
-        return new Promise((resolve, reject) => {
-            // query
-            dbPool.connect((err, client, release) => {
-                // exit if error
-                if (err) {
-                    logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.stack}`);
-                    logger.error(`[${evUniqueID}] -${MODULENAME}(${taskName}): CONN-ERR: ${err.message}`);
-                    return reject(err);
-                }
+        let client = await dbPool.connect();
+        let userList = await client.query(`select * from GetAllEmployee()`);
+        client.release();
+        return userList;
 
-                client.query('select * from GetAllEmployee()', (qErr, res) => {
-                    release();
-
-                    if (qErr) {
-                        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.stack}`);
-                        logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.message}`);
-
-                        return reject(qErr);
-                    }
-                    return resolve(res);
-                    //client.end()
-                });
-            })
-        })
     } catch (e) {
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${err.stack}`);
         logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${err.message}`);
@@ -103,31 +66,15 @@ const getUserbyID = async (evUniqueID, userid) => {
     try {
         logger.debug(`[${evUniqueID}]-${MODULENAME} (${taskName}- queryData: ${userid})`);
 
-        return new Promise((resolve, reject) => {
-            dbPool.connect((err, client, release) => {
-                if (err) {
-                    logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.stack}`);
-                    logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.message}`);
-                    return reject(err);
-                }
-
-                client.query("SELECT  * from getemployee('" + userid + "')", (qErr, result) => {
-                    release();
-                    if (qErr) {
-                        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.stack}`);
-                        logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.message}`);
-
-                        return reject(qErr);
-                    }
-                    return resolve(result);
-                });
-
-            });
-        });
+        let client = await dbPool.connect();
+        let findUser = await client.query(`SELECT  * from getemployee('${userid}')`);
+        client.release();
+        return findUser;
 
     } catch (error) {
         logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.stack}`);
         logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.message}`);
+
         throw error;
     }
 }
@@ -144,25 +91,10 @@ const deleteuserbyID = async (evUniqueID, data) => {
     try {
         logger.debug(`[${evUniqueID}]-${MODULENAME} (${taskName}- bodyParams: ${data})`);
 
-        return new Promise((resolve, reject) => {
-            dbPool.connect((err, client, release) => {
-
-                if (err) {
-                    logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.stack}`);
-                    logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.message}`);
-                    return reject(err);
-                }
-                client.query("SELECT public.deleteuserbyid('" + data + "')", (qErr, response) => {
-                    release();
-                    if (qErr) {
-                        logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${qErr.stack}`);
-                        logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${qErr.message}`);
-                        return reject(qErr);
-                    }
-                    return resolve(response);
-                });
-            });
-        })
+        let client = await dbPool.connect();
+        let deleteUser = await client.query(`SELECT public.deleteuserbyid('${data}')`);
+        client.release();
+        return deleteUser;
 
     } catch (error) {
         logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.stack}`);
@@ -182,25 +114,11 @@ const updateUser = async (evUniqueID, data) => {
     const taskName = 'updateUser';
     try {
         logger.debug(`[${evUniqueID}]-${MODULENAME} (${taskName} - bodyParams: ${JSON.stringify(data)})`);
-        return new Promise((resolve, reject) => {
 
-            dbPool.connect((err, client, release) => {
-                if (err) {
-                    logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.stack}`);
-                    logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${err.message}`);
-                    return reject(err);
-                }
-                client.query("SELECT public.updateuser('" + data.username + "','" + data.address + "')", (qErr, result) => {
-                    release();
-                    if (qErr) {
-                        logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${qErr.stack}`);
-                        logger.error(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${qErr.message}`);
-                        return reject(qErr);
-                    }
-                    return resolve(result);
-                });
-            });
-        })
+        let client = await dbPool.connect();
+        let updateData = await client.query(`SELECT public.updateuser('${data.username}','${data.address}')`)
+        client.release();
+        return updateData;
 
     } catch (error) {
         logger.debug(`[${evUniqueID}]- ${MODULENAME} (${taskName}) -${error.stack}`);
@@ -208,7 +126,6 @@ const updateUser = async (evUniqueID, data) => {
         throw error;
 
     }
-
 };
 
 /** 
