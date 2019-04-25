@@ -1,16 +1,24 @@
 'use strict';
+
 const MODULENAME = 'userRouter';
 
 const express = require('express');
+
 const paramValidator = require('./user.model');
+
 const userservice = require('./user.service');
+
 const middlewareHandler = require('../errorcodes/errorhandler');
+
 const logger = require('../config/winston.config');
+
+
 const userRoute = express.Router();
 
 /* For user registration */
 userRoute.post('/', middlewareHandler(async (req, res, next) => {
   const taskName = 'User Registration';
+
   logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(req.body)}`);
 
   const { username, email, mobile } = req.body;
@@ -34,6 +42,7 @@ userRoute.get('/', middlewareHandler(async (req, res, next) => {
   logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(req.body)}`);
 
   var data = await userservice.getEmployeeList(req.evUniqueID);
+
   res.status(200).json({ msg: 'Fetch record list successfully', data: data.rows });
 
 }));
@@ -41,6 +50,7 @@ userRoute.get('/', middlewareHandler(async (req, res, next) => {
 /* Fetch  employee details  using username*/
 userRoute.get('/:id', middlewareHandler(async (req, res, next) => {
   const taskName = 'Get Employee Deatils';
+
   logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(req.params)}`);
 
   const userdata = await userservice.getUserbyID(req.evUniqueID, req.params.id);
@@ -50,6 +60,7 @@ userRoute.get('/:id', middlewareHandler(async (req, res, next) => {
 
 /* Delete  employee  */
 userRoute.delete('/:id', middlewareHandler(async (req, res, next) => {
+
   const taskName = 'Delete Employee';
   logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(req.params)}`);
 
@@ -61,9 +72,11 @@ userRoute.delete('/:id', middlewareHandler(async (req, res, next) => {
 /* Update  employee  */
 userRoute.put('/', middlewareHandler(async (req, res, next) => {
   const taskName = 'Update Employee';
+
   logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(req.body)}`);
 
   const update = await userservice.updateUser(req.evUniqueID, req.body);
+
   return res.status(200).json({ data: update.rowCount, msg: "User data updated successfully" });
 }));
 

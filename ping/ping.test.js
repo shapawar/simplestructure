@@ -1,27 +1,17 @@
 'use strict';
 
-/** 
- * We are using assertion library that is expect.js for checking values in tests
- * for more deatils and common assertions functions go through https://github.com/mjackson/expect
- * 
-*/
-
-require('dotenv').config({ "path": '../secured/.env' });
-
 const request = require('supertest');
 
 const app = require("../server");
 
+const server = request.agent(`http://localhost:8080`);
 
 describe("PING GET route", () => {
 
     it('ping route for helth check', (done) => {
-        request(app)
+        server
             .get('/v1/ping')
-            .expect(200)
-            .end(function (err, res) {
-                if (err) throw err;
-                done();
-            });
+            .set('Accept', 'application/json')
+            .expect(200, done);
     })
 })

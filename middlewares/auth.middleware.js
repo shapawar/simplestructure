@@ -15,6 +15,7 @@ const TaskMetaDataModel = require('../models/task.metadata.model');
 const SKIPAUTH = [
     '/ping',
     '/login',
+    '/users',
     '/registration',
     '/apiutils/',
     'favicon.ico'
@@ -71,9 +72,9 @@ module.exports = function (req, res, next) {
 
                     return res.status(401).send(apiResp);
                 }
-                    req.decoded = decoded;
-                    next();
-                 
+                req.decoded = decoded;
+                next();
+
             });
         } else {
             logger.debug(`[${evUniqueID}] ${MODULENAME}(${taskName}): Missing AUTH BEARER token`);
