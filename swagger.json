@@ -1,0 +1,108 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Node Express API Scaffolding",
+        "description": "This is the API structure.",
+        "version": "1.0.0",
+        "contact": {
+            "name": "Hiraji Suryawanshi",
+            "email": "hiraji@compumatrice.com"
+        }
+    },
+    "produces": [
+        "application/json"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "paths": {
+        "/ping": {
+            "get": {
+                "summary": "Get application build information",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseMetadata"
+                        }
+                    },
+                    "default": {
+                        "description": "Error occurred",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseMetadata"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ApiResponseMetadata": {
+            "properties": {
+                "reqestURL": {
+                    "description": "Request URI",
+                    "type": "string"
+                },
+                "evUniqueID": {
+                    "description": "Request unique id",
+                    "type": "string"
+                },
+                "requestTS": {
+                    "description": "Request timestamp",
+                    "type": "string",
+                    "format": "date"
+                },
+                "elapsedTimeInMS": {
+                    "description": "Total elapsed time processsing the request",
+                    "type": "number"
+                },
+                "apiServer": {
+                    "description": "Host that serves the request",
+                    "type": "string"
+                },
+                "apiBuildVersion": {
+                    "description": " API build version",
+                    "type": "string"
+                },
+                "errCode": {
+                    "description": "Error code (0=OK, >0=error)",
+                    "type": "number"
+                },
+                "errMsg": {
+                    "description": "Error message",
+                    "type": "string"
+                },
+                "tasks": {
+                    "description": "Available in non-PROD environment for auditing tasks taken to process this request",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TaskMetadata"
+                    }
+                }
+            }
+        },
+        "TaskMetadata": {
+            "properties": {
+                "name": {
+                    "description": "Task name",
+                    "type": "string",
+                    "default": "--NOT SPECIFIED--"
+                },
+                "info": {
+                    "description": "Task information",
+                    "type": "string",
+                    "default": "--NOT SPECIFIED--"
+                },
+                "startTS": {
+                    "description": "Task start timestamp",
+                    "type": "string",
+                    "format": "date"
+                },
+                "elapsedTimeInMS": {
+                    "description": "Total elapsed time processsing the task",
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

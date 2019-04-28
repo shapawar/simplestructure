@@ -3,8 +3,8 @@
 
 const MODULENAME = 'signupService';
 
-const dbPool = require('../config/dbconfig');
-const logger = require('../config/winston.config');
+const dbPool = require('../../config/dbconfig');
+const logger = require('../../config/winston.logger.config');
 
 
 /**

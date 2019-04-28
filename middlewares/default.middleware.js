@@ -4,7 +4,7 @@ const uuidv4 = require('uuid/v4');
 const os = require('os');
 const crypto = require('crypto');
 
-const logger = require('../config/winston.config');
+const logger = require('../config/winston.logger.config');
 const APIResponseMetadataModel = require('../models/apiresponse.metadata.model');
 
 /**
@@ -12,17 +12,33 @@ const APIResponseMetadataModel = require('../models/apiresponse.metadata.model')
  */
 function hashAPIServer() {
   try {
+    //console.log("os.hostname()", os.hostname())
     const hash = crypto.createHash('sha256');
     hash.update(os.hostname());
 
-    return hash.digest('base64');
+    return hash.digest('hex');;
   } catch (e) {
     logger.error('hashAPIServer(): ' + e.message);
-    return '--NOT AVAILABLE--';
+
+    throw e;
   }
 };
 
+// function hashAPIServerv2() {
+//   try {
+//     const hash = crypto.createHash('sha256');
+
+//     hash.update('some data to hash');
+//     console.log(hash.digest('hex'));
+//   } catch (e) {
+//     logger.error('hashAPIServer(): ' + e.message);
+
+//     throw e;
+//   }
+// };
+
 const apiServerHash = hashAPIServer();
+//const apiServerHashv2 = hashAPIServerv2();
 
 /**
  *

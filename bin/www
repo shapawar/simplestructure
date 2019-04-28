@@ -11,7 +11,7 @@ require('../config/config');
  */
 const http = require('http');
 
-const winston = require('../config/winston.config');
+const logger = require('../config/winston.logger.config');
 const app = require('../server');
 
 /**
@@ -91,8 +91,8 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
 
-  winston.info(`API Version\t: ${process.env.APIVERSION}`);
-  winston.info(`API Port\t: ${addr.port}`);
-  winston.info(`Build Version\t: ${process.env.npm_package_version || '--NOT AVAILABLE--'}`);
-  winston.info(`NODE_ENV\t: ${process.env.NODE_ENV}`);
+  logger.info(`API Version\t: ${process.env.APIVERSION}`);
+  logger.info(`API Port\t: ${addr.port}`);
+  logger.info(`Build Version\t: ${process.env.npm_package_version || '--NOT AVAILABLE--'}`);
+  logger.info(`NODE_ENV\t: ${process.env.NODE_ENV}`);
 };

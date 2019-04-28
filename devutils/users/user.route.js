@@ -8,9 +8,9 @@ const paramValidator = require('./user.model');
 
 const userservice = require('./user.service');
 
-const middlewareHandler = require('../errorcodes/errorhandler');
+const middlewareHandler = require('../../errorcodes/errorhandler');
 
-const logger = require('../config/winston.config');
+const logger = require('../../config/winston.logger.config');
 
 
 const userRoute = express.Router();

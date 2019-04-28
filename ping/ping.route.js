@@ -1,7 +1,16 @@
 'use strict';
 
+const MODULENAME = "pingRoutes"
+
+/** 
+ * Express and third party imports
+*/
 const express = require('express');
-const winston = require('../config/winston.config');
+
+/** 
+ * Custom imports
+*/
+const logger = require('../config/winston.logger.config');
 
 const APIResponseModel = require('../models/apiresponse.model');
 const TaskMetaDataModel = require('../models/task.metadata.model');
@@ -19,7 +28,7 @@ pingRoute.get('/', (req, res) => {
     let task = TaskMetaDataModel.createTask('/ping', 'HEALTHCHECK');
 
     try {
-        winston.debug(`[${req.evUniqueID}] (${taskName}) - PING`);
+        logger.debug(`[${req.evUniqueID}] (${taskName}) - PING`);
 
         // add metadata task
         apiResp.metadata = res.locals.apiMeta; // from default middleware
@@ -33,7 +42,7 @@ pingRoute.get('/', (req, res) => {
     } catch (e) {
         // error
         httpRetVal = 400;
-        winston.error(`[${req.evUniqueID}] (${taskName}) - ${e.message}`);
+        logger.error(`[${req.evUniqueID}] (${taskName}) - ${e.message}`);
 
         throw e;
     }

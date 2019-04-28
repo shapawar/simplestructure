@@ -4,8 +4,8 @@ const express = require('express');
 const loginrouter = express.Router();
 const jwt = require('jsonwebtoken');
 const loginservice = require('./login.service');
-const errorHandler = require('../errorcodes/errorhandler');
-const logger = require('../config/winston.config');
+const errorHandler = require('../../errorcodes/errorhandler');
+const logger = require('../../config/winston.logger.config');
 
 loginrouter.get('/', (req, res, next) => {
     const taskName = 'Login Get';

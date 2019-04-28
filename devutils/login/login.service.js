@@ -1,8 +1,8 @@
 
 'use strict';
 const MODULENAME = 'loginService'
-const dbPool = require('../config/dbconfig');
-const logger = require('../config/winston.config');
+const dbPool = require('../../config/dbconfig');
+const logger = require('../../config/winston.logger.config');
 
 
 
@@ -11,13 +11,13 @@ const logger = require('../config/winston.config');
  * @param {*} evUniqueID req unique id
  * @param {*} data req data
  */
-exports.checkLogin = async (evUniqueID,data) => {
+exports.checkLogin = async (evUniqueID, data) => {
     const taskName = 'createUser';
 
     try {
 
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(data)}`);
-        const { username,  password } = data;
+        const { username, password } = data;
 
         return new Promise((resolve, reject) => {
 

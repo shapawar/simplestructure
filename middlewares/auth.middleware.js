@@ -4,7 +4,7 @@ const MODULENAME = 'AuthMiddleware';
 
 const jwt = require('jsonwebtoken');
 
-const logger = require('../config/winston.config');
+const logger = require('../config/winston.logger.config');
 
 const APIResponseModel = require('../models/apiresponse.model');
 const TaskMetaDataModel = require('../models/task.metadata.model');
@@ -16,6 +16,8 @@ const SKIPAUTH = [
     '/ping',
     '/login',
     '/users',
+    '/docs',
+    '/api-docs',
     '/registration',
     '/apiutils/',
     'favicon.ico'

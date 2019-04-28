@@ -2,7 +2,7 @@
 
 const MODULENAME = 'ErrorCodesService';
 
-const logger = require('../config/winston.config');
+const logger = require('../config/winston.logger.config');
 
 const GeneralErrors = require('./general.errorcodes.config');
 
@@ -17,7 +17,7 @@ function initErrors() {
     const taskName = 'initErrors';
 
     try {
-       
+
         Errors = Errors.concat(GeneralErrors);
 
         logger.debug(`[INIT] ${MODULENAME}(${taskName}): Errors.length=${Errors.length}`);
