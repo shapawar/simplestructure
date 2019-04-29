@@ -58,6 +58,7 @@ userRoute.get('/:id', middlewareHandler(async (req, res, next) => {
 
 }));
 
+
 /* Delete  employee  */
 userRoute.delete('/:id', middlewareHandler(async (req, res, next) => {
 
