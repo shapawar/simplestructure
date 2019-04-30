@@ -1,5 +1,8 @@
 'use strict';
 
+/** 
+ * Express and third party imports
+*/
 const { Pool } = require('pg');
 
 /**

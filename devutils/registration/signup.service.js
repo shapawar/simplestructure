@@ -20,28 +20,14 @@ exports.createUser = async (evUniqueID, data) => {
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(data)}`);
         const { username, email, mobile, password, address } = data;
 
-        return new Promise((resolve, reject) => {
+        let client = await dbPool.connect();
 
-            dbPool.connect((err, client, release) => {
+        let inserQuery = await client.query(`select register('${username}','${email}','${mobile}','${password}','${address}')`);
 
-                if (err) {
-                    logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${err.stack}`);
-                    logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName}): CONN-ERR: ${err.message}`);
-                    return reject(err);
-                }
+        client.release();
 
-                client.query("select register('" + username + "','" + email + "','" + mobile + "','" + password + "','" + address + "')", (qErr, result) => {
-                    release();
-                    if (qErr) {
-                        logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.stack}`);
-                        logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${qErr.message}`);
-
-                        return reject(qErr);
-                    }
-                    return resolve(result);
-                });
-            })
-        });
+        return inserQuery;
+        
     } catch (error) {
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${error.stack}`);
         logger.error(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${error.message}`);

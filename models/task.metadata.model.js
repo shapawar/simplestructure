@@ -1,5 +1,8 @@
 'use strict';
 
+/** 
+ * Express and third party imports
+*/
 const moment = require('moment');
 const SchemaObject = require('schema-object');
 

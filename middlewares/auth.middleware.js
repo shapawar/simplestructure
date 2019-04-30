@@ -2,10 +2,15 @@
 
 const MODULENAME = 'AuthMiddleware';
 
+/** 
+ * Express and third party imports
+*/
 const jwt = require('jsonwebtoken');
 
+/** 
+ * Custom imports
+*/
 const logger = require('../config/winston.logger.config');
-
 const APIResponseModel = require('../models/apiresponse.model');
 const TaskMetaDataModel = require('../models/task.metadata.model');
 

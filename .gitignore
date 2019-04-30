@@ -1,11 +1,11 @@
 # We don't want to push the node_modules
 node_modules
 
-# 
+# We don't need to push logs files details
 logs
 
-#
+#We don't want to share settings, task configuration and debug configuration 
 .vscode
 
-#
+#We don't want push the secured env file
 secured/.env

@@ -1,1 +1,0 @@
-## Add type of docs you have added in this directory

@@ -1,10 +1,15 @@
 'use strict';
 
+/** 
+ * Express and third party imports
+*/
 const moment = require('moment');
 const SchemaObject = require('schema-object');
 
+/** 
+ * Custom imports
+*/
 const TaskMetadataModel = require('./task.metadata.model');
-
 const ErrorCodeSvc = require('../errorcodes/errorcodes.service');
 
 /**

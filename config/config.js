@@ -7,7 +7,7 @@
 
 let config = {
     "development": {
-        "CONSTRING": `postgress://nodees5:admin2518@localhost:5432/nodedapp`
+        "CONSTRING": `postgress://postgres:admin2518@localhost:5432/nodees5`
     },
     "staging": {
 
