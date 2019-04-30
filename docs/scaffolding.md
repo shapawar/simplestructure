@@ -86,8 +86,7 @@ Node-Express-Scaffolding
 * This file includes dependencies, devDependencies, scripts to run app, and more.
 
 ## server.js:
-* This file is useful for initializ component based routing, modules,  .
-custom and default middlewares.
+* This file is useful for initializ component based routing, modules,custom and default middlewares.
 
 
 
