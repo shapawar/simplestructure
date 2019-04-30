@@ -1,9 +1,15 @@
 'use strict';
 
+/** 
+ * Express and third party imports
+*/
 const uuidv4 = require('uuid/v4');
 const os = require('os');
 const crypto = require('crypto');
 
+/** 
+ * Custom imports
+*/
 const logger = require('../config/winston.logger.config');
 const APIResponseMetadataModel = require('../models/apiresponse.metadata.model');
 

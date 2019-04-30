@@ -2,17 +2,26 @@
 const MODULENAME = 'loginRoute'
 const express = require('express');
 const loginrouter = express.Router();
+
 const jwt = require('jsonwebtoken');
+
+
 const loginservice = require('./login.service');
 const errorHandler = require('../../errorcodes/errorhandler');
 const logger = require('../../config/winston.logger.config');
 
+/** 
+ * Login Get method render on login page
+*/
 loginrouter.get('/', (req, res, next) => {
     const taskName = 'Login Get';
     logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: Null`);
     res.render('login', { title: "welcome to compumatrice", msg: null });
 });
 
+/** 
+ * Login Check 
+*/
 loginrouter.post('/', errorHandler(async (req, res, next) => {
     const taskName = 'logincheck';
     logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: ${JSON.stringify(req.body)}`);

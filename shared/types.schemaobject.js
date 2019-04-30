@@ -1,6 +1,9 @@
 /**
  * Common types for SchemaObject
  */
+/** 
+ * Express and third party imports
+*/
 const moment = require('moment');
 
  /**

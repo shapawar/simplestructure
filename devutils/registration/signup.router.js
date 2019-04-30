@@ -1,20 +1,26 @@
 'use strict';
 const MODULENAME = 'signupRoute';
 
-
 const express = require('express');
 const signuprouter = express.Router();
+
 const validators = require('../users/user.model');
 const authservice = require('./signup.service');
 const middlewareHandler = require('../../errorcodes/errorhandler');
 const logger = require('../../config/winston.logger.config');
 
+/** 
+ * Render sign up page
+*/
 signuprouter.get('/', (req, res, next) => {
     const taskName = 'Signup Get';
     logger.debug(`[${req.evUniqueID}] - ${MODULENAME}(${taskName})- QueryData: Null`);
     res.render('signup', { title: 'Wel-Come to Compumatrice', msg: null });
 });
 
+/** 
+ * Signup Post
+*/
 signuprouter.post('/', middlewareHandler(async (req, res, next) => {
 
 

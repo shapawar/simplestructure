@@ -65,7 +65,7 @@ swaggerTools.initializeMiddleware(swaggerSpec, (swaggerMiddleware) => {
 
 // additional route for development use only
 if (process.env.NODE_ENV === 'development') {
-  apiRouter.use(`/users`, usersrouter);
+  apiRouter.use('/users', usersrouter);
   apiRouter.use('/login', userlogin);
   apiRouter.use('/registration', usersignup);
 };

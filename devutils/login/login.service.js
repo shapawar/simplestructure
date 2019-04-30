@@ -1,6 +1,7 @@
 
 'use strict';
 const MODULENAME = 'loginService'
+
 const dbPool = require('../../config/dbconfig');
 const logger = require('../../config/winston.logger.config');
 
@@ -24,7 +25,7 @@ exports.checkLogin = async (evUniqueID, data) => {
 
         client.release();
 
-        return loginCheck;
+        return loginCheck.rows;
 
     } catch (error) {
         logger.debug(`[${evUniqueID}] - ${MODULENAME}(${taskName})- ${error.stack}`);

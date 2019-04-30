@@ -2,10 +2,11 @@
 
 const MODULENAME = 'ErrorCodesService';
 
+/** 
+ * Custom imports
+*/
 const logger = require('../config/winston.logger.config');
-
 const GeneralErrors = require('./general.errorcodes.config');
-
 const ErrorCodeModel = require('./errorcode.model');
 
 let Errors = [];
